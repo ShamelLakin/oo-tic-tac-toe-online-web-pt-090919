@@ -38,7 +38,7 @@ class TicTacToe
   
   def turn 
     puts "Enter a number 1 - 9:"
-    user_input
+    user_input = 
   end 
  
   # def turn_count
