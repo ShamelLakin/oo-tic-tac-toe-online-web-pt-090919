@@ -46,11 +46,11 @@ class TicTacToe
     @board.count{|token| token == "X" || token == "O"}
   end
   
-  # def turn 
-  #   puts "Enter a number 1 - 9:"
-  #   user_input.strip
-  #   index = input_to_index(input)
-  # end 
+  def turn 
+    puts "Enter a number 1 - 9:"
+    user_input.strip
+    index = input_to_index(input)
+  end 
  
  
 end 
