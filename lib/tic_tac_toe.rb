@@ -49,7 +49,7 @@ class TicTacToe
   end
 end 
 
-def turn 
+  def turn 
     puts "Enter a number 1 - 9:"
     user_input = gets.strip
     index = input_to_index(user_input)
@@ -79,35 +79,35 @@ def turn
     end
   }
    return false
-end
+  end
 
-def full?
+  def full?
   @board.all? {|index| index == "X" || index == "O"}
-end
-
-def draw?
-  if !won? && full?
-    return true
-  else
-    return false
   end
-end
 
-def over?
-  if won? || draw?
-    return true
-  else
-    return false
+  def draw?
+    if !won? && full?
+      return true
+    else
+      return false
+    end
   end
-end
 
-def winner
-  index = []
-  index = won?
-  if index == false
-    return nil
+  def over?
+    if won? || draw?
+      return true
   else
-    if @board[index[0]] == "X"
+      return false
+    end
+  end
+
+  def winner
+      index = []
+      index = won?
+    if index == false
+      return nil
+    else
+      if @board[index[0]] == "X"
       return "X"
     else
       return "O"
@@ -115,19 +115,17 @@ def winner
   end
 end
 
-def play
-  until over? == true
+  def play
+    until over? == true
     turn
   end
 
-  if won?
-    puts "Congratulations #{winner}!"
-  elsif draw?
+    if won?
+     puts "Congratulations #{winner}!"
+    elsif draw?
     puts "Cat's Game!"
+    end
   end
-end
 
- 
- 
-end 
+ end 
 
